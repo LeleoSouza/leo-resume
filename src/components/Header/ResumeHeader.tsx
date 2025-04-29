@@ -75,7 +75,7 @@ export default function ResumeHeader(props: Props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar component='nav' sx={{ backgroundColor: 'rgba(234, 231, 225, 0.15)', backdropFilter: 'blur(10px)' }}>
+      <AppBar component='nav' sx={{ backgroundColor: 'rgba(13, 13, 13, 0.57)', backdropFilter: 'blur(10px)' }}>
         <Toolbar sx={{ display: { sm: 'flex' }, justifyContent: { sm: 'center' } }}>
           <IconButton
             color='inherit'

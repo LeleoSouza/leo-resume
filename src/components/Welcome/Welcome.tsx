@@ -2,7 +2,7 @@ import { Box, Card, Divider, Stack, Typography, IconButton } from '@mui/material
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import { About } from '../About/About';
-import cover from '../../assets/sky.jpg';
+import cover from '../../assets/sky3.jpg';
 export const Welcome = () => {
   return (
     <Box
@@ -21,7 +21,7 @@ export const Welcome = () => {
       <Card
         sx={{
           minWidth: 300,
-          width: '70%',
+          width: '50%',
           padding: '20px',
           borderRadius: '10px',
           backgroundColor: 'rgba(13, 13, 13, 0.57)',
