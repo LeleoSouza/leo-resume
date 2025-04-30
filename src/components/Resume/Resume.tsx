@@ -6,17 +6,19 @@ export const Resume = () => {
     <Container
       id='resume-page-anchor'
       sx={{
+        scrollMarginTop: '66px',
         justifyContent: 'flex-start',
         display: 'flex',
-        width: '50%',
+        width: '60%',
         backgroundColor: 'white',
         flexWrap: 'wrap',
         alignContent: 'flex-start',
-        marginBottom: '50px',
+        marginBottom: '40px',
+        paddingTop: '40px',
       }}
     >
       {/* work */}
-      <Grid container spacing={2} sx={{ paddingTop: '25px' }}>
+      <Grid container spacing={2}>
         <Grid size={{ xs: 9, md: 2, lg: 2 }}>
           <Typography variant='h6' fontWeight='bold' sx={{ textDecoration: 'underline', color: 'gray' }}>
             WORK
@@ -25,14 +27,14 @@ export const Resume = () => {
         <Grid size={{ lg: 10, md: 10, xs: 12 }}>
           {workSchema.map(({ title, location, body }) => {
             return (
-              <Grid paddingBottom='20px'>
-                <Typography variant='h6' fontWeight='bold'>
+              <Grid key={`${title}${location}`} paddingBottom='20px'>
+                <Typography key={title} variant='h6' fontWeight='bold'>
                   {title}
                 </Typography>
-                <Typography variant='body2' sx={{ fontStyle: 'italic' }}>
+                <Typography key={location} variant='body2' sx={{ fontStyle: 'italic' }}>
                   {location}
                 </Typography>
-                <Typography variant='body1' sx={{ paddingTop: '20px' }}>
+                <Typography key={body} variant='body1' sx={{ paddingTop: '20px' }}>
                   {body}
                 </Typography>
               </Grid>
@@ -48,16 +50,18 @@ export const Resume = () => {
           </Typography>
         </Grid>
         <Grid size={{ lg: 10, md: 10, xs: 12 }} display='flex' flexWrap='wrap' justifyContent='space-between'>
-          {skillsSchema.map(({ title, list }) => {
+          {skillsSchema.map(({ title, list }, index) => {
             return (
-              <Grid width='250px'>
-                <Typography variant='h6' fontWeight='bold'>
+              <Grid key={`${title}${index}`} width='250px'>
+                <Typography key={title} variant='h6' fontWeight='bold'>
                   {title}
                 </Typography>
-                <List disablePadding sx={{ listStyleType: 'disc', pl: 2 }}>
-                  {list.map((items) => (
-                    <ListItem sx={{ display: 'list-item', padding: '5px' }}>
-                      <Typography variant='body2'>{items}</Typography>
+                <List key={index} disablePadding sx={{ listStyleType: 'disc', pl: 2 }}>
+                  {list.map((item, index) => (
+                    <ListItem key={`${item}${index}`} sx={{ display: 'list-item', padding: '5px' }}>
+                      <Typography key={item} variant='body2'>
+                        {item}
+                      </Typography>
                     </ListItem>
                   ))}
                 </List>

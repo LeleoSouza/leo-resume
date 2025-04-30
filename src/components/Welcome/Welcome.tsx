@@ -1,7 +1,8 @@
 import { Box, Card, Stack, Typography, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-import cover from '../../assets/sky3.jpg';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import cover from '../../assets/sky-background.jpg';
 
 export const Welcome = () => {
   return (
@@ -20,8 +21,7 @@ export const Welcome = () => {
     >
       <Card
         sx={{
-          minWidth: 300,
-          width: '50%',
+          width: '60%',
           padding: '30px',
           borderRadius: '6px',
           backgroundColor: 'rgba(13, 13, 13, 0.57)',
@@ -41,6 +41,14 @@ export const Welcome = () => {
           <Stack direction='row' spacing={3}>
             <IconButton onClick={() => window.open('https://github.com/LeleoSouza')}>
               <GitHubIcon sx={{ color: 'white' }} />
+            </IconButton>
+            <IconButton
+              sx={{ color: 'white' }}
+              onClick={() => {
+                window.open('https://www.linkedin.com/in/leonardo-souza-490188ba/');
+              }}
+            >
+              <LinkedInIcon />
             </IconButton>
             <IconButton>
               <ContactPageIcon sx={{ color: 'white' }} />

@@ -9,7 +9,7 @@ interface SkillsSchemaInterface {
 }
 export const workSchema: WorkSchemaInterface[] = [
   {
-    title: 'Senior Engineer',
+    title: 'Senior Software Engineer',
     location: 'Acuity, Inc • 2023 - Present',
     body: 'Developed front-end solutions for federal government contracts. Used React, Spring Boot, Node.js, GraphQL, Postgres, and Elasticsearch. Collaborated across departments to design and implement scalable systems.',
   },

@@ -3,49 +3,15 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Fade from '@mui/material/Fade';
-import { Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import { Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-interface Props {
-  window?: () => Window;
-  children?: React.ReactElement<unknown>;
-}
-
-function ScrollTop(props: Props) {
-  const { children, window } = props;
-
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-    disableHysteresis: true,
-    threshold: 100,
-  });
-
-  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector('#welcome-page-anchor');
-
-    if (anchor) {
-      anchor.scrollIntoView({
-        block: 'center',
-      });
-    }
-  };
-
-  return (
-    <Fade in={trigger}>
-      <Box onClick={handleClick} role='presentation' sx={{ position: 'fixed', bottom: 16, right: 16 }}>
-        {children}
-      </Box>
-    </Fade>
-  );
-}
+import { ScrollTop } from '../Scroll/Scroll';
+import { drawerWidth, navItems } from './constants/constants';
+import { Props } from '../../constants/constants';
 
 export default function ResumeHeader(props: Props) {
-  const drawerWidth = 240;
-  const navItems = ['About', 'Resume', 'Contact'];
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -60,9 +26,12 @@ export default function ResumeHeader(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.displayValue} disablePadding>
+            <ListItemButton
+              sx={{ textAlign: 'center' }}
+              onClick={(e) => props.handleMenuClick({ event: e, querySelector: item.querySelector })}
+            >
+              <ListItemText primary={item.displayValue} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -87,8 +56,12 @@ export default function ResumeHeader(props: Props) {
           </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+              <Button
+                key={item.displayValue}
+                onClick={(e) => props.handleMenuClick({ event: e, querySelector: item.querySelector })}
+                sx={{ color: '#fff' }}
+              >
+                {item.displayValue}
               </Button>
             ))}
           </Box>
@@ -112,7 +85,7 @@ export default function ResumeHeader(props: Props) {
         </Drawer>
       </nav>
 
-      <ScrollTop {...props}>
+      <ScrollTop handleMenuClick={props.handleMenuClick} window={props.window}>
         <Fab size='small' aria-label='scroll back to top'>
           <KeyboardArrowUpIcon />
         </Fab>
