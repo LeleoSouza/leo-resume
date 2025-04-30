@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import cover from '../../assets/sky-background.jpg';
-
+import resume from '../../../public/leonardo-resume.pdf';
 export const Welcome = () => {
   return (
     <Box
@@ -50,7 +50,11 @@ export const Welcome = () => {
             >
               <LinkedInIcon />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open(resume);
+              }}
+            >
               <ContactPageIcon sx={{ color: 'white' }} />
             </IconButton>
           </Stack>
