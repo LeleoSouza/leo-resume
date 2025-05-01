@@ -21,7 +21,7 @@ export const Welcome = () => {
     >
       <Card
         sx={{
-          width: '60%',
+          width: { xs: '95%', md: '70%', lg: '60%' },
           padding: '30px',
           borderRadius: '6px',
           backgroundColor: 'rgba(13, 13, 13, 0.57)',

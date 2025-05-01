@@ -4,7 +4,7 @@ import PlaceIcon from '@mui/icons-material/Place';
 export const About = () => {
   return (
     <Box id='about-me-anchor' sx={{ padding: '20px', backgroundColor: 'rgb(59, 59, 59)', scrollMarginTop: '66px' }}>
-      <Box sx={{ width: '60%', margin: '0 auto' }}>
+      <Box sx={{ width: { xs: '95%', md: '70%', lg: '60%' }, margin: '0 auto' }}>
         <Grid container display='flex' justifyContent='center' padding='10px'>
           <Grid>
             <Typography variant='h5' gutterBottom color='white'>

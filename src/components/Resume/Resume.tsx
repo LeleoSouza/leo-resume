@@ -6,10 +6,10 @@ export const Resume = () => {
     <Container
       id='resume-page-anchor'
       sx={{
+        width: { xs: '95%', md: '70%', lg: '60%' },
         scrollMarginTop: '66px',
         justifyContent: 'flex-start',
         display: 'flex',
-        width: '60%',
         backgroundColor: 'white',
         flexWrap: 'wrap',
         alignContent: 'flex-start',
