@@ -13,7 +13,7 @@ export const Contact = () => {
         justifyContent: 'center',
       }}
     >
-      <Box sx={{ width: '60%', color: 'white', marginBottom: '30px', marginTop: '30px' }}>
+      <Box sx={{ width: { xs: '95%', md: '70%', lg: '60%' }, color: 'white', marginBottom: '30px', marginTop: '30px' }}>
         <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', paddingBottom: '20px' }}>
           <MailOutlineIcon sx={{ fontSize: '90px' }} />
           <Typography variant='h4'>Get in touch.</Typography>
