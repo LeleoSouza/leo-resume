@@ -7,7 +7,7 @@ export const Resume = () => {
       id='resume-page-anchor'
       sx={{
         width: { xs: '95%', md: '70%', lg: '60%' },
-        scrollMarginTop: '64px',
+        scrollMarginTop: { lg: '64px', xs: '55px' },
         justifyContent: 'flex-start',
         display: 'flex',
         backgroundColor: 'white',
