@@ -19,11 +19,12 @@ export default function ResumeHeader(props: Props) {
     setMobileOpen((prevState) => !prevState);
   };
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant='h6' sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: 'center',
+      }}
+    >
       <List>
         {navItems.map((item) => (
           <ListItem key={item.displayValue} disablePadding>
@@ -78,7 +79,13 @@ export default function ResumeHeader(props: Props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+              backgroundColor: 'rgba(13, 13, 13, 0.57)',
+              backdropFilter: 'blur(10px)',
+              color: 'white',
+            },
           }}
         >
           {drawer}
