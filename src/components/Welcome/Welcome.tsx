@@ -2,7 +2,7 @@ import { Box, Card, Stack, Typography, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import cover from '../../assets/sky-background.jpg';
+import cover from '../../assets/welcome-wallpaper.jpg';
 import resume from '../../assets/leonardo-resume.pdf';
 export const Welcome = () => {
   return (
