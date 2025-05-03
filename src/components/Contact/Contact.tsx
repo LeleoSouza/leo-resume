@@ -1,7 +1,7 @@
 import { Box, Link, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
 export const Contact = () => {
   return (
     <Box
@@ -41,9 +41,9 @@ export const Contact = () => {
             </Link>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
-            <GitHubIcon sx={{ paddingRight: '10px' }} />
+            <SmartphoneIcon sx={{ paddingRight: '10px' }} />
             <Link color='inherit' href='https://github.com/LeleoSouza' underline='none'>
-              GitHub/LeleoSouza
+              (443) 833 7719
             </Link>
           </Box>
         </Box>
