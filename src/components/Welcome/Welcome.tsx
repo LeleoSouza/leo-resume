@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import cover from '../../assets/sky-background.jpg';
-import resume from '../../../public/leonardo-resume.pdf';
+import resume from '../../assets/leonardo-resume.pdf';
 export const Welcome = () => {
   return (
     <Box
@@ -31,11 +31,12 @@ export const Welcome = () => {
           justifyContent: 'center',
         }}
       >
-        <Typography variant='h3'>Hi, I'm Leonardo Elias</Typography>
+        <Typography variant='h3'>Hi, I'm Leonardo Elias!</Typography>
         <Typography variant='h6' align='center' marginBottom='10px'>
-          I'm a Full Stack Software Engineer with a passion for finding elegant solutions to complex problems. I have
-          over 4 years of experience working to create enterprise level modern applications using the latest
-          technologies.
+          Welcome to my corner of the web. I'm a Frontend Software Engineer with a passion for solving complex problems
+          with clean, elegant solutions. With over 4+ years of experience, I've had the privilege of building modern,
+          enterprise-level applications using the latest technologies. I'm always excited about creating software that
+          makes a difference and delivering seamless, intuitive experiences.
         </Typography>
         <Box sx={{ justifyContent: 'center' }}>
           <Stack direction='row' spacing={3}>

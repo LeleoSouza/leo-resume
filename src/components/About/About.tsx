@@ -3,7 +3,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import PlaceIcon from '@mui/icons-material/Place';
 export const About = () => {
   return (
-    <Box id='about-me-anchor' sx={{ padding: '20px', backgroundColor: 'rgb(59, 59, 59)', scrollMarginTop: '66px' }}>
+    <Box id='about-me-anchor' sx={{ padding: '20px', backgroundColor: 'rgb(59, 59, 59)', scrollMarginTop: '64px' }}>
       <Box sx={{ width: { xs: '95%', md: '70%', lg: '60%' }, margin: '0 auto' }}>
         <Grid container display='flex' justifyContent='center' padding='10px'>
           <Grid>
@@ -11,9 +11,12 @@ export const About = () => {
               About Me
             </Typography>
             <Typography color='white'>
-              I'm a passionate software engineer who loves building thoughtful, high-quality applications. I've worked
-              extensively with technologies like React, React Native, TypeScript, Node.js, GraphQL, Next.js, Postgres,
-              MongoDB, and many more. I take pride in crafting software that’s not just functional, but truly impactful.
+              I’ve always been drawn to how technology can solve real problems and make people’s lives easier. Over the
+              past few years, I’ve honed my skills as a frontend engineer by working on everything from government tools
+              to internal platforms that teams rely on daily. I enjoy digging into the details—whether that’s
+              fine-tuning a user experience, refactoring code for better performance, or collaborating with others to
+              bring an idea to life. Outside of coding, I’m the kind of person who’s always curious, always learning,
+              and always up for a new challenge.
             </Typography>
 
             <Divider sx={{ my: 2, backgroundColor: 'white' }} />
