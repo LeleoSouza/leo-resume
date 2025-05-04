@@ -3,9 +3,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import resume from '../../assets/leonardo-resume.pdf';
-// import Ballpit from '../Background/Ballpit';
-// import Threads from '../Background/Threads';
-// import Particles from '../Background/Particles';
 import Aurora from '../Background/Aurora';
 import Dock from '../Dock/Dock';
 
@@ -53,25 +50,6 @@ export const Welcome = () => {
           zIndex: 0,
         }}
       >
-        {/* <Threads amplitude={1} distance={0} enableMouseInteraction={true} /> */}
-        {/* <Ballpit
-          count={90}
-          gravity={0.5}
-          friction={0.9975}
-          wallBounce={0.95}
-          followCursor={false}
-        /> */}
-        {/* <Particles
-          particleColors={['#ffffff', '#ffffff']}
-          particleCount={200}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={300}
-          moveParticlesOnHover={false}
-          alphaParticles={false}
-          disableRotation={false}
-        /> */}
-        import Aurora from './Aurora';
         <Aurora colorStops={['#F5F5DC', '#4B6A9B', '#F5F5DC']} blend={0.5} amplitude={2.0} speed={0.5} />
       </Box>
       <Card
