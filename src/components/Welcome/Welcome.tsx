@@ -1,29 +1,9 @@
 import { Box, Card, Typography } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import ContactPageIcon from '@mui/icons-material/ContactPage';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import resume from '../../assets/leonardo-resume.pdf';
 import Aurora from '../Background/Aurora';
 import Dock from '../Dock/Dock';
+import { items } from './constants/constants';
 
 export const Welcome = () => {
-  const items = [
-    {
-      icon: <GitHubIcon sx={{ color: 'white' }} />,
-      label: 'GitHub',
-      onClick: () => window.open('https://github.com/LeleoSouza'),
-    },
-    {
-      icon: <LinkedInIcon sx={{ color: 'white' }} />,
-      label: 'LinkedIn',
-      onClick: () => window.open('https://www.linkedin.com/in/leonardo-souza-490188ba/'),
-    },
-    {
-      icon: <ContactPageIcon sx={{ color: 'white' }} />,
-      label: 'Download Resume',
-      onClick: () => window.open(resume),
-    },
-  ];
   return (
     <Box
       id='welcome-page-anchor'
@@ -66,8 +46,30 @@ export const Welcome = () => {
           justifyContent: 'center',
         }}
       >
-        <Typography variant='h3'>Hi, I'm Leonardo Elias!</Typography>
-        <Typography variant='h6' align='center' marginBottom='10px'>
+        <Typography
+          sx={{
+            fontSize: {
+              xs: '1.5rem',
+              sm: '2rem',
+              md: '2.5rem',
+              lg: '3rem',
+            },
+          }}
+        >
+          Hi, I'm Leonardo Elias!
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: {
+              xs: '0.9rem',
+              sm: '1.0rem',
+              md: '1.2rem',
+              lg: '1.3rem',
+            },
+          }}
+          align='center'
+          marginBottom='10px'
+        >
           Welcome to my corner of the web. I'm a Frontend Software Engineer with a passion for solving complex problems
           with clean, elegant solutions. With over 4+ years of experience, I've had the privilege of building modern,
           enterprise-level applications using the latest technologies. I'm always excited about creating software that
