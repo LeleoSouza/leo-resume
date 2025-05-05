@@ -43,7 +43,7 @@ export default function ResumeHeader(props: Props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar component='nav' sx={{ backgroundColor: 'rgba(13, 13, 13, 0.57)', backdropFilter: 'blur(10px)' }}>
+      <AppBar component='nav' sx={{ backgroundColor: 'rgba(31, 31, 31, 0.57)', backdropFilter: 'blur(10px)' }}>
         <Toolbar sx={{ display: { sm: 'flex' }, justifyContent: { sm: 'center' } }}>
           <IconButton
             color='inherit'
@@ -81,7 +81,7 @@ export default function ResumeHeader(props: Props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              backgroundColor: 'rgba(13, 13, 13, 0.57)',
+              backgroundColor: 'rgba(31, 31, 31, 0.57)',
               backdropFilter: 'blur(10px)',
               color: 'white',
             },
