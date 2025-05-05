@@ -36,7 +36,7 @@ export const Welcome = () => {
         sx={{
           width: { xs: '95%', md: '70%', lg: '60%' },
           position: 'relative',
-          zIndex: 1, // above the Threads
+          zIndex: 1,
           padding: '30px',
           borderRadius: '6px',
           backgroundColor: 'rgba(31, 31, 31, 0.57)',
@@ -61,8 +61,8 @@ export const Welcome = () => {
         <Typography
           sx={{
             fontSize: {
-              xs: '0.9rem',
-              sm: '1.0rem',
+              xs: '1.0rem',
+              sm: '1.1rem',
               md: '1.2rem',
               lg: '1.3rem',
             },
