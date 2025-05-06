@@ -12,7 +12,7 @@ export const Footer = () => {
         <IconButton
           sx={{ color: 'white' }}
           onClick={() => {
-            window.open('https://www.linkedin.com/in/leonardo-souza-490188ba/');
+            window.open('https://www.linkedin.com/in/leonardo-elias-490188ba/');
           }}
         >
           <LinkedInIcon />
