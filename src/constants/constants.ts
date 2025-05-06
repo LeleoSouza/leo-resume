@@ -7,3 +7,6 @@ export interface Props {
   children?: React.ReactElement<unknown>;
   handleMenuClick: (props: HandleMenuClick) => void;
 }
+
+export const linkedIn = 'https://www.linkedin.com/in/leonardo-elias-490188ba/';
+export const gitHub = 'https://github.com/LeleoSouza';
